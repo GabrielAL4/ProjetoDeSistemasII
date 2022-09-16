@@ -12,12 +12,11 @@ public class Agendada extends EstadoLocacao{
         Date dataRetirada = getData();
         Date dataDeEntrega = getData();
         if(c1.data.compareTo(dataRetirada) > 0){
-            if(c1.data.compareTo(dataDeEntrega) < 0){
-                c1.estado = new EmAndamento();
-            }
-            if(c1.data.compareTo(dataDeEntrega) == 0){
-                c1.estado = new Concluida();
-            }
+            if(c1.data.compareTo(dataDeEntrega) < 0)c1.estado = new EmAndamento();
+            if(c1.data.compareTo(dataDeEntrega) == 0)c1.estado = new Concluida();
+        }
+        else{
+            System.out.println("Reserva agendada para: " + c1.data +" garantia de acidentes " + caucao);
         }
     }
 }
