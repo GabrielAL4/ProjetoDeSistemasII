@@ -1,9 +1,15 @@
 package Locacao;
+import Veiculo.Veiculo;
+//1- Disponível locação
+//2- Disponível Venda
+//3- Em manutenção
+//4- Vendido
 import java.util.Date;
-import java.util.Scanner;
-public class Locacao {
+
+public class Locacao extends Veiculo {
     double valor;
     Date data;
+    Veiculo v1;
     EstadoLocacao estado;
     public Locacao(double valor, Date data) {
         this.data = data;
